@@ -153,3 +153,31 @@ console.log(name5)
 // name4 = "Kate"; // Eror kalau dijalankan
 // console.log(name4);
 // Nilai variable name4 TIDAK BISA di update karena CONST
+
+// Deklarasikan constant language
+const language = "Prancis";
+
+// Cetak nilai constant language
+console.log(language);
+
+// Gunakan constant language untuk mencetak "Saya bisa berbicara bahasa ____"
+console.log("Saya bisa berbicara bahasa " + language);
+
+// Template Literal
+// Hingga saat ini, kita hanya menggunakan simbol tanda tambah (+) untuk menggabungkan string dan constant. Di ES6, Anda bisa melakukan hal ini dengan menggunakan fitur baru yang disebut template literal. Dengan template literal, Anda dapat memasukkan constant (variable) di dalam string, seperti gambar dibawah. Mari kita lihat slide berikutnya untuk mempelajarinya lebih lanjut.
+const name6 = "Ninja Ken";
+console.log(`Halo ${name6}`);
+
+// Cara Menulis Template Literal
+// Seperti contoh dikiri, Anda dapat memasukkan constant dan variable ke string dengan menulis ${someConstant}. Saat melakukan ini, Anda harus meletakkan keseluruhan string di antara dua backtick(`) . Anda juga dapat memasukkan beberapa variable dan constant seperti yang ditampilkan pada contoh dikanan.
+
+const name7 = "Ninja Ken";
+const age = 14;
+console.log(`${name7} berusia ${age} tahun`);
+
+// Mengetikkan Backtick
+// Gambar dibawah mengilustrasikan bagaimana mengetik backtick pada keyboard. Karakter ini mungkin letaknya sedikit berbeda tergantung pada komputer jenis apa yang Anda pergunakan.
+// `backtick`
+// 'Tanda kutip Tunggal'
+// "Tanda kutip" 
+
