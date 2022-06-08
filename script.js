@@ -181,3 +181,253 @@ console.log(`${name7} berusia ${age} tahun`);
 // 'Tanda kutip Tunggal'
 // "Tanda kutip" 
 
+const name8 = "Ninja Ken";
+const age1 = 14;
+
+// Cetak string "Nama saya adalah ____"
+console.log(`Nama saya adalah ${name8}`);
+
+// Cetak string "Hari ini saya berusia ____ tahun"
+console.log(`Hari ini saya berusia ${age1} tahun`);
+
+// Statement if
+// Percabangan kondisional
+// Selanjutnya, mari kita pelajari percabangan kondisional, sebuah konsep penting dalam pemrograman. Saat mempelajari pemrograman, akan ada saatnya dimana Anda ingin menentukan kapan code tertentu ingin dijalankan. Perintah ini disebut percabangan kondisional.
+
+// Struktur Statement if
+// Saat statement if digunakan, percabangan kondisional, "jika X lakukan Y", akan diaktifkan. Tulis kondisi tersebut setelah if dan tulis code untuk kapan, kondisi ini akan valid dalam tanda kurung kurawal { }. Pahami cara menulis statement if melalui gambar dibawah ini.
+
+// Menulis Code Statement if
+// Mari kita lihat cara kerja code statement if.
+// Pertama, baca statement kondisional digambar kiri. Kondisi number > 10 berarti "nilai angka constant lebih besar daripada 10." Saat 12 ditetapkan ke constant number, kondisi ini berlaku, dan codenya akan dijalankan.
+const number3 = 12;
+if(number3 > 10) {
+    console.log("number lebih besar dari 10");
+}
+
+// Indentasi untuk Statement if
+// Saat menulis statement if, pastikan untuk membuat indentasi. Code yang terindentasi dengan benar akan lebih mudah di baca. Indentasi pada contoh di bawah memperjelas kapan statement if dimulai. Kami sarankan untuk membuat indentasi dengan tombol tab.
+
+// Mencetak Conditional Expression
+// Di pelajaran sebelumnya, Anda telah mempelajari cara menggunakan conditional statement if. Selanjutnya, mari kita lihat conditional expression. Seperti yang ditunjukkan di kanan, true di-print di console saat code di statement if berjalan. Apa arti "true" ini?
+console.log(number3 > 10);
+// Output is True (Benar)
+
+// Boolean
+// "true" yang di-print di console pada slide sebelumnya disebut boolean. Tipe data boolean memiliki dua nilai; true dan false. Conditional statement dinilai "true" jika kondisi terpenuhi dan "false" jika sebaliknya. Anda dapat melihat cara kerjanya pada contoh di bawah.
+console.log(number3 > 10);
+// Output is True (Benar)
+console.log(number3 < 10);
+// Output is False (Salah)
+
+const number4 = 12;
+if(number4 > 10) {
+    console.log("Number lebih besar dari 10");
+}
+
+if(true) {
+    console.log("Number lebih besar dari 10 #True");
+}
+
+// Perbandingan Nilai
+// Simbol > yang digunakan di conditional statement merupakan operator perbandingan ukuran nilai. Untuk a < b berarti, jika a kurang dari b, statement-nya akan menjadi true, jika a sama dengan atau lebih besar dari b statement akan menjadi false. Sama untuk a <= b, jika a kurang atau sama dengan b, statement akan menjadi true, dan sebaliknya.
+
+// Operator Perbandingan
+// a < b adalah a lebih kecil dari b
+// a > b adalah a lebih besar dari b
+// a <= b adalah a lebih kecil dari atau sama dengan b
+// a >= b adalah a lebih besar dari atau sama dengan b
+
+const number5 = 12;
+console.log (number5 < 30);
+// Output is True (Benar)
+console.log (number5 <= 12);
+// Output is True (Benar)
+console.log (number5 > 30);
+// Output is False (Salah)
+
+const age2 = 24;
+
+// Cetak hasil dari age >= 18
+console.log(age2 >= 18);
+
+// Cetak hasil dari age < 18
+console.log(age2 < 18);
+
+/* Ketika nilai dari age lebih besar atau sama dengan 18
+dan cetak "Saya berusia lebih dari 18 tahun" */
+if(age2 >= 18) {
+  console.log("Saya berusia lebih dari 18 tahun");
+}
+
+// Selain operator perbandingan yang kita pelajari sebelumnya, ada juga operator perbandingan untuk menentukan kesamaan antara dua nilai. a === b akan menjadi true jika a dan b sama, dan false jika tidak sama. a !== b adalah kebalikannya. Simbol ini dapat digunakan untuk membandingkan nilai integer dan string.
+// Operator Kesetaraan
+// a === b adalah a dan b sebanding
+// a !== b adalah a dan b tidak sebanding
+const number6 = 12;
+console.log(number6 === 12);
+// Output is True (Benar)
+const name9 = "John";
+console.log(name9 !== "John");
+
+const password = "ninjaken";
+// Ketika nilai password adalah "ninjaken", cetak "Berhasil log in"
+if(password === "ninjaken") {
+  console.log("Berhasil log in");
+}
+// Ketika nilai password bukan "ninjaken", cetak "Password salah"
+if(password !== "ninjaken") {
+  console.log("Password salah");
+}
+
+// else
+// Jika Kondisi tidak Terpenuhi
+// Ada saatnya dimana Anda harus memanggil code yang berbeda jika kondisi statement if adalah false. Seperti yang ditunjukkan dibawah, Anda harus memanggil code yang berbeda untuk mem-print "Nilai kurang dari atau sama dengan 10" jika nilai angka tidak lebih besar dari 10.
+
+// Struktur Statement else
+// Seperti pada contoh di bawah, dengan menggabungkan statement else dan if, Anda akan dapat membuat control flow (pengontrolan alur), seperti "jika X, lakukan Y, jika tidak, lakukan Z". Jika kondisi statement if adalah false, code di statement else akan berjalan.
+// if (kondisi) {
+//     ketika kondisinya true
+// } else {
+//     ketika kondisinya false
+// }
+
+// Menulis Code di Statement else
+// Mari kita lihat contoh code yang menggunakan else. Digambar kiri, kita hanya menggunakan statement if untuk menentukan hasil apakah nilai constant number lebih besar dari 10. Sedangkan digambar kanan adalah contoh cara melakukan hal yang sama dengan satu expression kondisi menggunakan statement else.
+const number7 = 7;
+if (number7 > 10) {
+    console.log("Number lebih besar dari 10");
+} else {
+    console.log("Number lebih kecil atau sama dengan 10");
+}
+
+const age3 = 17;
+// Ketika kondisi tidak terpenuhi, cetak "Saya berusia dibawah 18 tahun"
+if (age3 >= 18) {
+  console.log("Saya berusia diatas 18 tahun");
+} else {
+  console.log("Saya berusia dibawah 18 tahun");
+}
+
+// Menambahkan Kondisi
+// Mari kita lihat cara menambahkan kondisi lebih banyak ke statement if dan else. Misalnya, kita akan mempelajari cara menambahkan pengontrolan alur untuk menyertakan kondisi yang tidak "lebih besar dari 10" tetapi "lebih besar dari 5".
+
+// else if
+// Menulis Statement else if
+// Seperti pada contoh di bawah, dengan menambahkan else if (kondisi) antara if dan else, Anda akan dapat menambahkan alur pengontrolan lebih banyak. Mari kita lihat slide berikutnya untuk penjelasan lebih detail.
+// if (kondisi1) {
+//     ketika kondisi true
+// } else if (kondisi2) {
+//     ketika kondisi1 false
+//     dan kondisi2 true
+// } else {
+//     ketika tidak ada kondisi yang true
+// }
+
+// Code else if
+// Mari kita lihat cara penggunaan fungsi else if. Seperti pada contoh dikiri, konten fungsi else if akan berjalan karena conditional statement kedua adalah true. Hasil ini dicetak pada console seperti yang dapat kita lihat disisi kanan.
+const number8 = 7;
+if (number8 > 10) { // false
+    console.log("number lebih besar dari 10");
+} else if (number8 > 5) { // true
+    console.log("number lebih besar dari 5");
+} else {
+    console.log("number lebih kecil atau sama dengan 5");
+}
+
+const age4 = 17;
+
+/* Ketika age lebih besar atau sama dengan 10, cetak:
+"Saya berusia dibawah 18 tahun, namun diatas 9 tahun" */
+if (age4 >= 18) {
+    console.log("Saya di atas 18 tahun");
+} else if (age4 >= 10) {
+    console.log("Saya berusia di bawah 18 tahun, namun di atas 9 tahun");
+} else {
+    console.log("saya dibawah 10 tahun");
+}
+
+// Beberapa Kondisi
+// Dan (AND)
+// Selanjutnya kita akan pelajari cara menggabungkan beberapa kondisi. Pertama, kita akan mempelajari &&. Kondisi 1 && Kondisi 2 berarti "Kondisi 1 dan Kondisi 2" dimana hanya jika semua kondisi adalah true, maka ekspresi adalah true. Contohnya "Lebih besar dari 10 dan lebih kecil dari 30" tidak dapat ditulis sebagai 10 < x < 30. Pada kasus ini, gunakan &&!
+
+// Operator logika- &&
+// true && true -> true
+// true && false -> false
+// false && true -> false
+// false && false -> false
+
+// Atau (OR)
+// Selanjutnya, kita akan mempelajari simbol yang berarti "OR" (Atau). Atau diekspresikan dalam bentuk ||. Kondisi 1 || Kondisi 2 berarti "Kondisi 1 atau Kondisi 2". Pada kasus ini, di antara beberapa kondisi, jika salah satunya adalah true, maka keseluruhan ekspresi menjadi true.
+
+// Operator logika- ||
+// true || true -> true
+// true || false -> true
+// false || true -> true
+// false || false -> false
+
+// Contoh Penggabungan
+// Mari kita lihat contoh statement if menggunakan "dan". Pada contoh di kiri, number >= 10 dan number < 100 adalah true, jadi konten fungsinya dipanggil.
+const number9 = 31;
+if (number9 >= 10 && number < 100) {
+    console.log("number berdigit 2");
+}
+
+const age5 = 24;
+// Tambahkan pernyataan if dengan kondisi yang telah ditentukan
+if(age5 >= 20 && age5 < 30) {
+  console.log("Saya di usia 20-an tahun");
+}
+
+// Apa itu Statement switch?
+// Cara lain untuk menggunakan pengontrolan alur, adalah statement switch. Gambar dibawah adalah contoh untuk mendasarkan alur pengontrolan pada nilai constant warna yang menyimpan warna lampu lalu lintas. Anda akan dapat menggunakan statement switch ketika percabangan code tergantung pada nilai tertentu. Lihat slide berikutnya untuk informasi lebih detail!
+
+// Cara Menulis Statement switch
+// Code Anda dapat dibagi dengan menambahkan case ke statement switch. Pada contoh dikanan, kata "Berhenti!" dicetak jika constant warna adalah "merah". Kami akan menjelaskan break di slide yang berbeda.
+
+// switch (nilai kondisional) {
+//     case nilai1:
+//         ketika nilai kondisional sama dengan nilai 1
+//         break;
+// }
+// tambahkan case untuk setiap nilai yang di harapkan
+
+const color = "merah";
+switch (color) {
+    case "merah":
+        console.log("Berhenti!"); // dijalankan ketika constant color benilai "merah"
+        break;
+}
+
+// Cara Menulis Statement switch (3)
+// Pada statement switch, case ditambahkan di setiap cabang logika. Pada contoh dikanan, "kuning" diberikan sebagai nilai case kedua dimana ketika nilainya true, maka "Perlahan!" akan dicetak.
+
+// switch (nilai kondisional) {
+//     case nilai1:
+//         ketika nilai kondisional sama dengan nilai1
+//         break;
+//     case nilai2:
+//         ketika nilai kondisional sama dengan nilai2
+//         break;
+// }
+// tambahkan case untuk setiap kondisi
+
+switch (color) {
+    case "merah":
+        console.log("Berhenti!"); // dijalankan ketika constant color benilai "merah"
+        break;
+    case "kuning":
+        console.log("Perlahan"); // dijalankan ketika constant color benilai "kuning"
+        break;
+}
+
+// Poin Penting Tentang Statement switch
+// Selain itu, break sangat penting untuk statement switch. break adalah perintah untuk mengakhiri setiap case di statement switch. Jika tidak ada break, code dari case berikutnya yang cocok juga akan terpanggil. Jangan lupa dengan break saat menggunakan statement switch.
+switch (color) {
+    case "merah":
+        console.log("Berhenti!"); // dijalankan ketika constant color benilai "merah"
+    case "kuning":
+        console.log("Perlahan"); // dijalankan ketika constant color benilai "kuning"
+        break;
+}
+
