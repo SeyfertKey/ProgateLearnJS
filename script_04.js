@@ -300,35 +300,135 @@ dog12.info();
 
 console.log(`\n`);
 class Animal13 {
-    constructor(name, age) {
-      this.name = name;
-      this.age = age;
-    }
-    
-    greet() {
-      console.log("Halo");
-    }
-    
-    info() {
-      this.greet();
-      console.log(`Nama saya adalah ${this.name}`);
-      console.log(`Saya berusia ${this.age} tahun`);
-    }
-  } 
-  
-  class Dog13 extends Animal13 {
-    // Tambahkan method getHumanAge
-    getHumanAge() {
-      return this.age * 7;
-    }
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
   }
   
-  const dog13 = new Dog13("Leo", 4);
-  dog13.info();
+  greet() {
+    console.log("Halo");
+  }
   
-  // Panggil method getHumanAge milik instance dog
-  const humanAge = dog13.getHumanAge();
+  info() {
+    this.greet();
+    console.log(`Nama saya adalah ${this.name}`);
+    console.log(`Saya berusia ${this.age} tahun`);
+  }
+} 
+
+class Dog13 extends Animal13 {
+  // Tambahkan method getHumanAge
+  getHumanAge() {
+    return this.age * 7;
+  }
+}
+
+const dog13 = new Dog13("Leo", 4);
+dog13.info();
+
+// Panggil method getHumanAge milik instance dog
+const humanAge = dog13.getHumanAge();
+
+// Print 「Saya berusia __ tahun dalam umur manusia」
+console.log(`Saya berusia ${humanAge} tahun dalam umur manusia`);
+
+// Overriding 
+// Method dengan Nama yang Sama
+// Kita telah mempelajari bahwa class anak dapat menggunakan method dalam class induk dan class anak. Namun, apa yang terjadi bila method dengan nama yang sama seperti method dalam class Animal (class induk) dideklarasikan dalam class Dog (class anak)? Method manakah yang dipanggil?
+
+// Overriding (Timpa)
+// Bila method dengan nama yang sama seperti method dalam class induk didefinisikan dalam class anak, maka method class anak yang akan digunakan. Ini karena method class anak menimpa method class induk, hal ini disebut overriding.
+
+// Overriding Method info
+// Di sini, mari kita print usia anjing dalam usia manusia menggunakan method info dari class Dog. Dengan method getHumanAge yang Anda deklarasikan pada halaman sebelumnya, tulis ulang method seperti yang ditunjukkan di bawah ini.
+
+// Method Induk dan Anak
+// Dengan menggunakan gambar di bawah ini sebagai referensi, tebak, method apa yang dapat digunakan dalam class Dog (class anak)?
+
+console.log('\n');
+class Animal14 {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
   
-  // Print 「Saya berusia __ tahun dalam umur manusia」
-  console.log(`Saya berusia ${humanAge} tahun dalam umur manusia`);
+  greet() {
+    console.log("Halo");
+  }
   
+  info() {
+    this.greet();
+    console.log(`Nama saya adalah ${this.name}`);
+    console.log(`Saya berusia ${this.age} tahun`);
+  }
+}
+
+class Dog14 extends Animal14 {
+  // Tambahkan method info
+  info() {
+    this.greet();
+    console.log(`Nama saya adalah ${this.name}`);
+    console.log(`Saya berusia ${this.age} tahun`);
+    
+    const humanAge = this.getHumanAge();
+    console.log(`Saya berusia ${humanAge} tahun dalam umur manusia`);
+  }
+  
+  getHumanAge() {
+    return this.age * 7;
+  }
+}
+
+const dog14 = new Dog14("Leo", 4);
+dog14.info();
+
+// Overriding Constructor
+// Constructor dapat ditimpa dengan cara yang sama seperti method. Misalnya, Anda ingin menambahkan property ke class anak. Untuk melakukan overriding constructor, Anda harus menambahkan super() dibaris pertama constructor penimpa. Mari kita pelajari hal ini lebih lanjut dalam slide berikutnya.
+
+// Overriding Constructor
+// Code super() dalam constructor class anak akan memanggil constructor class induk. Karena itu, kita harus memberikan argument di antara () milik super(), sehingga constructor class induk dapat menerima argument tersebut. Sekarang, setelah memanggil constructor class milik induk, property breed akan ditambahkan.
+
+console.log(`\n`);
+class Animal15 {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  
+  greet() {
+    console.log("Halo");
+  }
+  
+  info() {
+    this.greet();
+    console.log(`Nama saya adalah ${this.name}`);
+    console.log(`Saya berusia ${this.age} tahun`);
+  }
+}
+
+class Dog15 extends Animal15 {
+  // Tambahkan constructor
+  constructor(name, age, breed) {
+    super(name, age);
+    this.breed = breed;
+  }
+  
+  info() {
+    this.greet();
+    console.log(`Nama saya adalah ${this.name}`);
+    // Print 「Saya adalah seekor ____」
+    console.log(`Saya adalah seekor ${this.breed}`);
+    
+    console.log(`Saya berusia ${this.age} tahun`);
+    const humanAge = this.getHumanAge();
+    console.log(`Saya berusia ${humanAge} tahun dalam umur manusia`);
+  }
+  
+  getHumanAge() {
+    return this.age * 7;
+  }
+}
+
+// Tetapkan "Chihuahua" sebagai nilai argument
+const dog15 = new Dog15("Leo", 4, "Chihuahua");
+dog15.info();
